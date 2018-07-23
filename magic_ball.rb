@@ -26,14 +26,14 @@ class MagicBall
     ]
 
     def ask question
-        # Validate the question by checking if it's a String
-        # and the last character is a question mark
         raise "Question has invalid format." unless is_question_valid?(question)
         ANSWERS.sample
     end
 
     private
     def is_question_valid?(question)
+        # Validate the question by checking if it's a String
+        # and the last character is a question mark
         question.is_a?(String) && question[-1] == "?"
     end
 end
